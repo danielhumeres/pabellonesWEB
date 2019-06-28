@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cirugia;
+use App\Pabellon;
+
 class CirugiaController extends Controller
 {
     /**
@@ -24,7 +26,8 @@ class CirugiaController extends Controller
      */
     public function create()
     {
-        return view ('cirugia.create');
+        $numero = Pabellon::all(); 
+       return view ('cirugia.create', compact('numero') );
     }
 
     /**
@@ -35,9 +38,12 @@ class CirugiaController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(['idCirugia' => 'required','nombrePaciente' => 'required','fechaHorarioInicio' => 'required','fechaHorarioTermino' => 'required','Pabellon_NumPabellon' => 'required',]);
+        request()->validate(['nombrePaciente' => 'required',
+        'fechaHorarioInicio' => 'required','fechaHorarioTermino' => 'required',
+        'Pabellon_NumPabellon' => 'required']);
         Cirugia::create($request->all());
-        return redirect()->route('/detallecirugia/store');
+        return redirect()->route('cirugias')->with('status','Cirugía Creada');
+     
     }
 
     /**
@@ -59,8 +65,8 @@ class CirugiaController extends Controller
      */
     public function edit($idCirugia)
     {
-        $cirugia = Cirugia::find($idCirugia);
-        return view('cirigua.edit', compact('cirugia', 'idCirugia'));
+        $cirugia = Cirugia::find($idCirugia); 
+        return view('cirugia.edit', compact('cirugia', 'idCirugia' ));
     }
 
     /**
@@ -74,7 +80,7 @@ class CirugiaController extends Controller
     {
         request()->validate(['idCirugia' => 'required','nombrePaciente' => 'required','fechaHorarioInicio' => 'required','fechaHorarioTermino' => 'required','Pabellon_NumPabellon' => 'required',]);
         Cirugia::find('$idCirugia')->update($request->all());
-        return redirect()->route('/detallecirugia/store');
+        return redirect()->route('cirugias')->with('status','Cirugía Actualizada');
     }
 
     /**

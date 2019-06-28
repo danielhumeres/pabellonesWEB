@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<a href="{{url('pabellon/index')}}" class="btn btn-danger">Volver</a>
 <div class="container">
 <div class="row">
     <!-- action para enviar datos por url-->
@@ -12,7 +13,7 @@
         </div>
         <div class="form-group">
             <label for="Estado"> Estado </label>
-            <input type="text" name="estado" class="form-control" value="{{$pabelllon->estado}}">
+            <input type="text" name="estado" class="form-control" value="{{$pabellon->estado}}">
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-default"> Grabar </button>

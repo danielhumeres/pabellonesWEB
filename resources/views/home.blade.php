@@ -17,7 +17,7 @@
                     <a href="{{url('pabellon/index')}}" class="btn btn-primary"> Pabellones</a>
                     <a href="{{url('medico/index')}}" class="btn btn-danger"> Medicos</a>
                     <a href="{{url('cirugia/index')}}" class="btn btn-success"> Cirugias</a>
-
+                    <a href="{{url('detallecirugia/create')}}" class="btn btn-info"> Detalle Cirugias</a>
                 </div>
             </div>
         </div>

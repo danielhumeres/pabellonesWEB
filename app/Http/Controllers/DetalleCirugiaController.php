@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\DetalleCirugia;
+use App\Cirugia;
+use App\Medico;
+use App\TipoMedico;
 class DetalleCirugiaController extends Controller
 {
     /**
@@ -24,7 +27,9 @@ class DetalleCirugiaController extends Controller
      */
     public function create()
     {
-        return view ('detallecirugia.create');
+        $cirugia = Cirugia::all();
+        $medico  = Medico::all() ; 
+        return view ('detallecirugia.create', compact('cirugia','medico'));
     }
 
     /**

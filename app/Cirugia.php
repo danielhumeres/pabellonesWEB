@@ -8,6 +8,7 @@ class Cirugia extends Model
 {
     protected $table = 'cirugia';
     public $timestamps = false;
-    protected $fillable = ['nombrePaciente', 'fechaHorarioInicio', 'fechaHorarioTermino'];
+    protected $fillable = ['nombrePaciente', 'fechaHorarioInicio', 'fechaHorarioTermino', 'Pabellon_NumPabellon'];
+    protected $primaryKey = 'idCirugia';
 
 }

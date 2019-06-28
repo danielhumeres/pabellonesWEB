@@ -8,5 +8,7 @@ class Medico extends Model
 {
     protected $table = 'medico';
     public $timestamps = false;
+
+    
 }
 ?>

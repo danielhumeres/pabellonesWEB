@@ -8,4 +8,6 @@ class DetalleCirugia extends Model
 {
     protected $table = 'detallecirugia';
     public $timestamps = false;
+    protected $primaryKey = 'idDetalleCirugia';
+
 }

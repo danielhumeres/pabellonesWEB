@@ -16,7 +16,7 @@
     <tr>
         <td>numero pabellon</td>
         <td>estado</td>
-        <td colspan="2">acciones</td>
+        <td>acciones</td>
     </tr>
 </thead>
 <tbody>
@@ -25,7 +25,7 @@
     <td>{{$pab->numPabellon}}</td>
     <td>{{$pab->estado}}</td>
     <td><a href="{{action('PabellonController@edit',$pab->numPabellon)}}" class="btn btn-primary"> Modificar</a></td>
-    <td><a href="{{action('PabellonController@destroy',$pab->numPabellon)}}" class="btn btn-danger"> Eliminar</td>
+
 </tr>
 @endforeach
 

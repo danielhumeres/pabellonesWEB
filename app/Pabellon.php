@@ -9,5 +9,6 @@ class Pabellon extends Model
     protected $table = 'pabellon';
     public $timestamps = false;
     protected $fillable = ['numPabellon', 'estado'];
+    protected $primaryKey = 'numPabellon';
 }
 ?>

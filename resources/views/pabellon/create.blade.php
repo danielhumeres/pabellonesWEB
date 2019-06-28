@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<a href="{{url('pabellon/index')}}" class="btn btn-danger">Volver</a>
 <div class="container">
 <div class="row">
     <form action="{{url('/pabellon/store')}}" method="POST">

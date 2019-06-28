@@ -26,7 +26,7 @@ Route::post('/pabellon/store', 'PabellonController@store');
 Route::get('/pabellon/edit/{numPabellon}', 'PabellonController@edit');
 Route::post('/pabellon/update/{numPabellon}', 'PabellonController@update');
 
-Route::get('pabellon/destroy{numPabellon}', 'PabellonController@destroy');
+Route::get('/pabellon/destroy{numPabellon}', 'PabellonController@destroy');
 
 //Medico
 Route::get('/medico/index', 'MedicoController@index')->name('medicos');
@@ -39,7 +39,7 @@ Route::post('/cirugia/store', 'CirugiaController@store');
 Route::get('/cirugia/edit/{idCirugia}', 'CirugiaController@edit');
 Route::post('/cirugia/update/{idCirugia}', 'CirugiaController@update');
 
-Route::get('cirugia/destroy{idCirugia}', 'CirugiaController@destroy');
+Route::get('/cirugia/destroy{idCirugia}', 'CirugiaController@destroy');
 
 //Detalle cirugía
 

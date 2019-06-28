@@ -25,7 +25,7 @@
     <td>{{$med->idMedico}}</td>
     <td>{{$med->nombre}}</td>
     <td>{{$med->apellido}}</td>
-    <td>{{$med->TipoMedico_idTipoMedico}}</td>
+    <td>{{$med->descripcion}}</td>
 
 </tr>
 @endforeach

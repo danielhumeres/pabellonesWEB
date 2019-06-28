@@ -30,7 +30,7 @@ public function store (Request $request)
 public function edit($numPabellon)
 {
     $pabellon = Pabellon::find($numPabellon);
-    return view('pabellones.edit', compact('pabellon', 'numPabellon'));
+    return view('pabellon.edit', compact('pabellon', 'numPabellon'));
 }
 
 
